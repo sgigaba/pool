@@ -27,7 +27,7 @@ db.query("USE PoolDB; SELECT * FROM PLAYER WHERE Email = '"+email+"' AND pass = 
             console.log(recordset.rowsAffected);
             if (recordset.rowsAffected == 1){
                 sesh.loggedin = 1;
-                res.redirect('leaderboard');
+                res.redirect('userprofile');
             }
         }
     }

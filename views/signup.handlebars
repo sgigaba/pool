@@ -1,10 +1,58 @@
- <form action = "signup" method = "post">
-     Enter username:
-     <input type = "text" name = "name">
-     Password:
-    <input type = "password" name = "password">
-    Email:
-    <input type = "email" name = "email"> 
-    
-    <input type = "submit" value = "submit">
-    </form>
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="https://s3.amazonaws.com/peoplepng/wp-content/uploads/2018/07/26160823/8-ball-pool-photos.png"
+                alt="" />
+            <h3>Welcome</h3>
+            <p>You are 30 seconds away from joining an exclusive pool club!</p>
+            <a href="login.handlebars"><input type="submit" name="" value="Login" /></a><br />
+        </div>
+        <div class="col-md-9 register-right">
+            <div class="tab-content" id="myTabContent">
+                {{!-- <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> --}}
+                    <h3 class="register-heading">Register as a Player</h3>
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input type="text" class="form-control" placeholder="Username *" value="" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control" placeholder="Password *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password</label>
+                                <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                            </div>
+                            <label>Email</label>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <div class="maxl">
+                                    <label class="radio inline">
+                                        <input type="radio" name="gender" value="male" checked>
+                                        <span> Male </span>
+                                    </label>
+                                    <label class="radio inline">
+                                        <input type="radio" name="gender" value="female">
+                                        <span>Female </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <input type="submit" class="btnRegister" value="Register" />
+                        </div>
+                        <div class="col-md-6">
+   
+                            
+                        </div>
+                    </div>
+                {{!-- </div> --}}
+
+            </div>
+        </div>
+    </div>
+
+</div>

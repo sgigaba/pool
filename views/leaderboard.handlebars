@@ -1,38 +1,16 @@
-
 <div id="page_content">
+    
     <h1 class="sub_header">Leader Board</h1>
-    <div class="board_item">
-        <h2 class="rank">1</h2>
-        <p class="player_name">Kondie</p>
-        <input value="Challenge" class="btn btn-dark" type="button">
-    </div>
-    <div class="board_item">
-        <h2 class="rank">1</h2>
-        <p class="player_name">Kondie</p>
-        <input value="Challenge" class="btn btn-dark" type="button">
-    </div>
-    <div class="board_item">
-        <h2 class="rank">1</h2>
-        <p class="player_name">Kondie</p>
-        <input value="Challenge" class="btn btn-dark" type="button">
-    </div>
-    <div class="board_item">
-        <h2 class="rank">1</h2>
-        <p class="player_name">Kondie</p>
-        <input value="Challenge" class="btn btn-dark" type="button">
-    </div>
-    <div class="board_item">
-        <h2 class="rank">1</h2>
-        <p class="player_name">Kondie</p>
-        <input value="Challenge" class="btn btn-dark" type="button">
-    </div>
-    <div class="board_item">
-        <h2 class="rank">1</h2>
-        <p class="player_name">Kondie</p>
-        <input value="Challenge" class="btn btn-dark" type="button">
-    </div>
+    {{#each players}}
+        <div class="board_item">
+            <h2 class="rank">{{@key}}</h2>
+            <p class="player_name">{{this.Username}}</p>
+            <form method="post" class="inline_form" action="leaderboard">
+                <input style="display: none;" name="username" value="{{this.Username}}" class="btn btn-dark">
+                <input value="Challenge" class="btn btn-dark" type="submit">
+            </form>
+        </div>
+    {{/each}}
 </div>
 <div id="footer">
-
 </div>
-</body>

@@ -1,11 +1,17 @@
 
 <div id="page_content">
     <h1 class="sub_header">Challenges</h1>
-    <div class="challenge_item">
-        <p class="player_name">Kondie</p>
-        <input value="Accept" class="btn btn-success" type="button">
-        <input value="Decline" class="btn btn-danger" type="button">
-    </div>
+    {{#each challenges}}
+        <div class="challenge_item">
+            <p class="player_name">{{this.Challenger}} is challenging you to a game of pool</p>
+            <form class='inline_form' action="challanges" method="post">
+                <input style="display: none;" name="username" value="{{this.Challenger}}" class="btn btn-dark">
+                <input style="display: none;" name="id" value="{{this.ChallengeID}}" class="btn btn-dark">
+                <input name='reply' value="Accept" class="btn btn-success" type="submit">
+                <input name='reply' value="Decline" class="btn btn-danger" type="submit">
+            </form>
+        </div>
+    {{/each}}
 </div>
 <div id="footer">
 </div>
