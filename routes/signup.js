@@ -28,6 +28,7 @@ db.query("USE PoolDB INSERT INTO Player (Username, Email, Score, Pass) VALUES ('
         console.log(err);
     }else{
         console.log("User added");
+        res.redirect('login');
     }
 });
 console.log("sending stuff");

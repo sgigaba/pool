@@ -1,15 +1,19 @@
+  
+
 <div id="page_content">
-    
-    <h1 class="sub_header">Leader Board</h1>
+      <h1 class="sub_header">Leader Board</h1>
+
     {{#each players}}
-        <div class="board_item">
-            <h2 class="rank">{{@key}}</h2>
-            <p class="player_name">{{this.Username}}</p>
+    
+        <img src = "uploads{{this.pp}}" height = "150px" width="150px">
             <form method="post" class="inline_form" action="leaderboard">
                 <input style="display: none;" name="username" value="{{this.Username}}" class="btn btn-dark">
                 <input value="Challenge" class="btn btn-dark" type="submit">
             </form>
-        </div>
+                  <p class="player_name">{{this.Username}}</p>
+    <br>
+    <br>
+    <hr>
     {{/each}}
 </div>
 <div id="footer">

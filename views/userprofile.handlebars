@@ -5,16 +5,36 @@
 	
         
     <h1>Profile <br>
+
+	 <div id="pp" class="bg-info padding-inner">
+
+          <div class="list-group">
+           
+             <h3> Upload a profile picture </h3>
+              <hr style = "color:black">
+      <form method = "POST" action = "/pp" enctype="multipart/form-data">
+        <input type = "file" name = "filetoupload">
+        <br>
+         <button type = "submit" name = "submit"> Upload </button>
+            </form>
+            <form method = "POST" action = "/deleted">
+            <button type = "submit" name = "submit"> Delete profile pic </button>
+            </form>
+       </div>
+
+        </div>
+     
 	<!-- Contenedor -->
 	<ul id="accordion" class="accordion">
     <li>
 <div class="col col_4 iamgurdeep-pic">
-<img class="img-responsive iamgurdeeposahan" alt="userimage" src="http://bootdey.com/img/Content/avatar/avatar6.png">
+
+<img class="img-responsive iamgurdeeposahan" alt="userimage" src="uploads{{path}}">
 <div class="edit-pic">
 </div>
 <div class="username">
-    <h2><small>Lucky Doe</small><small><i class="fa fa-map-marker"></i> BBD(JHB)</small></h2>
-    <a href="#" target="_blank"  class="btn-o"> <i class="fa fa-plus"></i>Challenge </a>
+    <h2><small>{{name}}</small><small><i class="fa fa-map-marker"></i> BBD(JHB)</small></h2>
+    {{!-- <a href="#" target="_blank"  class="btn-o"> <i class="fa fa-plus"></i>Challenge </a> --}}
      <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-ellipsis-v pull-right"></span></a>

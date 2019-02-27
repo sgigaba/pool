@@ -1,13 +1,4 @@
-// var express = require('express');
-// var app = express();
 
-// app.get('/', function(req, res){
-// res.render('leaderboard', {
-// logged : "is"
-// });
-// });
-
-// module.exports = app;
 
 var express = require('express');
 var app = express();

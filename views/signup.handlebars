@@ -11,37 +11,28 @@
             <div class="tab-content" id="myTabContent">
                 {{!-- <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> --}}
                     <h3 class="register-heading">Register as a Player</h3>
+                    <form action = "signup" method = "post">
                     <div class="row register-form">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Username</label>
-                                <input type="text" class="form-control" placeholder="Username *" value="" />
+                                <input type="text" class="form-control" placeholder="Username *" name = "name"/>
+                            </div>
+
+                                                        <label>Email</label>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email *" name = "email" />
                             </div>
 
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="password" class="form-control" placeholder="Password *" value="" />
+                                <input type="password" class="form-control" placeholder="Password *" name = "password"/>
                             </div>
                             <div class="form-group">
                                 <label>Confirm Password</label>
-                                <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                                <input type="password" class="form-control" placeholder="Confirm Password *" name = "confirm" />
                             </div>
-                            <label>Email</label>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Email *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <div class="maxl">
-                                    <label class="radio inline">
-                                        <input type="radio" name="gender" value="male" checked>
-                                        <span> Male </span>
-                                    </label>
-                                    <label class="radio inline">
-                                        <input type="radio" name="gender" value="female">
-                                        <span>Female </span>
-                                    </label>
-                                </div>
-                            </div>
+
                             <input type="submit" class="btnRegister" value="Register" />
                         </div>
                         <div class="col-md-6">
@@ -49,6 +40,7 @@
                             
                         </div>
                     </div>
+                       </form>
                 {{!-- </div> --}}
 
             </div>

@@ -12,6 +12,8 @@ const signup = require('./routes/signup');
 var bodyparser = require('body-parser');
 var sql = require("mssql");
 var db = require('./routes/db');
+var formidable = require('formidable');
+var pp = require('./routes/pp');
 
 app.engine('handlebars', handlebars.engine);
 app.set('port', process.env.PORT || 3000);
@@ -30,6 +32,7 @@ app.use('/events', events);
 app.use('/challanges', challenges);
 app.use('/login', login);
 app.use('/signup', signup);
+app.use('/pp', pp);
 app.listen(app.get('port'), function(){
     console.log('started');
     });
