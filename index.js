@@ -20,6 +20,9 @@ app.use(bodyparser.urlencoded({
     extended: true}));
 
 app.use(express.static(__dirname + '/public'));
+
+app.use(session({secret: 'your secret', saveUninitialized: true, resave: false}))
+
 app.use('/', homepage);
 app.use('/leaderboard', leaderboard);
 app.use('/userprofile', userprofile);
