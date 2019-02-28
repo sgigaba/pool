@@ -5,18 +5,33 @@ var db = require("./db");
 
 app.get('/', function(req, res){
 
-    db.query("USE PoolDB; SELECT * FROM Challenge WHERE Reply='none'", function(err, result){
-        
+    db.query("USE PoolDB; SELECT * FROM OPEN_EVENT", function(err, recordset){
+        playerone = [];
+        playertwo = [];
+        v = 0;
         if (err){
             console.log(err);
+        }else{
+            console.log(recordset);
         }
-        else{
-            res.render('challanges', {
-                challenges: result.recordset,
-                logged: "true"
-            });
-        }
+
+        db.query("USE PoolDB; SELECT * FROM Challenge WHERE Reply='none'", function(err, result){
+        
+            if (err){
+                console.log(err);
+            }
+            else{
+                res.render('challanges', {
+                    challenges: result.recordset,
+                    logged: "true"
+                    
+                });
+            }
+        });
+        
     });
+
+ 
 });
 
 

@@ -20,12 +20,13 @@ app.get('/', function(req, res){
 });
 
 app.post('/', function(req, res){
-    db.query("INSERT INTO Challenge(Challenged, Challenger, Reply) VALUES('"+req.body.username+"', 'kondieii', 'none')", function(err, result){
+    db.query("INSERT INTO Challenge(Challenged, Challenger, Reply) VALUES('"+req.body.username+"', '"+sesh.email+"', 'none')", function(err, result){
         if (err){
             console.log(err);
         }
         else{
             console.log("Challenged");
+            console.log(result);
         }
     });
 });

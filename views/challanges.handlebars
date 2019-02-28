@@ -1,6 +1,6 @@
 
 <div id="page_content">
-    <h1 class="sub_header">Challenges</h1>
+    <h1 class="sub_header">Your Challengers</h1>
     {{#each challenges}}
         <div class="challenge_item">
             <p class="player_name">{{this.Challenger}} is challenging you to a game of pool</p>
@@ -12,6 +12,18 @@
             </form>
         </div>
     {{/each}}
+
+        <h1 class="sub_header">Challenges</h1>
+
+        {{#each open}}
+        <div>
+      <h1>{{this.Player_1}} VS {{this.Player_2}}  </h1>
+     <button type = "info" class = "btn btn-primary"> {{this.GameDate}} at {{this.GameTime}} </button>
+       </div>
+       <br>
+       <hr>
+       <hr>
+        {{/each}}
 </div>
 <div id="footer">
 </div>

@@ -12,18 +12,6 @@ app.get('/', function(req, res){
         });
     });
 
-    // db.query("USE PoolDB; SELECT * FROM OPEN_EVENT", function(err, results){
-    //     playerone = [];
-    //     playertwo = [];
-    //     v = 0;
-    //     if (err){
-    //         console.log(err);
-    //     }else{
-     
-    //     }
-    
-        
-    // });
   
 });
 
