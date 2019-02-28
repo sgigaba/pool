@@ -1,10 +1,8 @@
   
-
+     <h1 class="sub_header" style = "color:black">Leader Board</h1>
 <div id="page_content">
-      <h1 class="sub_header">Leader Board</h1>
-
+ 
     {{#each players}}
-    
         <img src = "uploads{{this.pp}}" height = "150px" width="150px">
             <form method="post" class="inline_form" action="leaderboard">
                 <input style="display: none;" name="username" value="{{this.Username}}" class="btn btn-dark">
